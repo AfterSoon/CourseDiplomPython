@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -40,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'users',
-    'tasks'
+    'tasks',
 ]
 
 MIDDLEWARE = [
@@ -80,10 +81,10 @@ WSGI_APPLICATION = 'app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'postgres_test',
+        'USER': 'postgres_test',
         'HOST': 'localhost',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'test_test',
     }
 }
 
@@ -93,7 +94,8 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
@@ -149,9 +151,7 @@ STATIC_URL = '/backend/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 APP_SERVICE_URL = os.environ.get('APP_SERVICE_URL', None)
-APP_SERVICE_CONNECTION = os.environ.get(
-    'APP_SERVICE_CONNECTION', 'SyncConnection'
-)
+APP_SERVICE_CONNECTION = os.environ.get('APP_SERVICE_CONNECTION', 'SyncConnection')
 
 APP_API_HOST = os.environ.get('APP_API_HOST', 'http://localhost')
 

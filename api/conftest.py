@@ -1,13 +1,14 @@
-from typing import TYPE_CHECKING
-from django.apps import apps
-import pytest
-from django.core.files.uploadedfile import SimpleUploadedFile
 from queue import Empty
-from rest_framework.test import APIClient
-from tasks.handlers import handler
-from django.contrib.auth.models import User
+from typing import TYPE_CHECKING
 
-from lib.build.lib.app_lib.services.notification_service import NotificationService
+import pytest
+from django.apps import apps
+from django.contrib.auth.models import User
+from django.core.files.uploadedfile import SimpleUploadedFile
+from lib.app_lib.services.notification_service import NotificationService
+from rest_framework.test import APIClient
+
+from tasks.handlers import handler
 from tasks.models import File
 
 if TYPE_CHECKING:
@@ -39,8 +40,15 @@ ADMIN_NAME = 'admin'
 
 @pytest.fixture
 def admin():
-    # TODO нужно дополнить фикстуру что бы она возвращала вновь созданного пользователя в статусе admin
-    ...
+    """Создание пользователя с правами администратора"""
+    admin_user = User.objects.create_superuser(
+        username=ADMIN_NAME,
+        password='admin_password',
+        email='admin@example.com',
+        is_staff=True,
+        is_active=True,
+    )
+    return admin_user
 
 
 @pytest.fixture

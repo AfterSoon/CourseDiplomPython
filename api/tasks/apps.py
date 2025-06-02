@@ -1,10 +1,12 @@
-import app_lib
-from app_lib.services.controller.config import controller_config
-from app_lib.services.main import Service
-from app_lib.services.notification_service import NotificationService
-from app_lib.connections import SyncConnection
+
 from django.apps import AppConfig
 from django.conf import settings
+
+from lib import app_lib
+from lib.app_lib.connections import SyncConnection
+from lib.app_lib.services.controller.config import controller_config
+from lib.app_lib.services.main import Service
+from lib.app_lib.services.notification_service import NotificationService
 
 
 class TasksConfig(AppConfig):
@@ -15,6 +17,11 @@ class TasksConfig(AppConfig):
 
     @property
     def connection(self) -> 'SyncConnection':
+        """ Creates connection if not exists
+
+        Returns:
+            SyncConnection: connection
+        """
         if not self._connection:
             connection_class = getattr(app_lib, settings.APP_SERVICE_CONNECTION)
             connection = connection_class(settings.APP_SERVICE_URL)
@@ -24,6 +31,11 @@ class TasksConfig(AppConfig):
 
     @property
     def service(self) -> 'Service':
+        """ Creates service if not exists
+
+        Returns:
+            Service: service
+        """
         if not self._service:
             service = Service(**controller_config)
             service.setup(self.connection)
@@ -32,6 +44,11 @@ class TasksConfig(AppConfig):
 
     @property
     def notifications(self) -> 'NotificationService':
+        """ Creates notification service if not exists
+
+        Returns:
+            NotificationService: notification service
+        """
         if not self._notifications:
             notifications = NotificationService()
             notifications.setup(self.connection, create_queue=False)
