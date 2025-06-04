@@ -1,0 +1,23 @@
+{
+  "name": "pythondiplomlastvers",
+  "version": "1.0.0",
+  "description": "## Развертывание 1. Собираем контейнеры `docker-compose -f staging-local.docker-compose.yml build` 2. Запустить контейнеры  `docker-compose -f staging-local.docker-compose.yml up -d` 3. Авторизация - логин: start_admin - пароль: starter12345",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfterSoon/CourseDiplomPython.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AfterSoon/CourseDiplomPython/issues"
+  },
+  "homepage": "https://github.com/AfterSoon/CourseDiplomPython#readme"
+}
