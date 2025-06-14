@@ -1,10 +1,10 @@
-version: "3.8"
+
 
 services:
   app_base:
     build:
       context: ./lib
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     image: app/app_base
 
     container_name: app_base
@@ -44,8 +44,8 @@ services:
 
   notifications:
     build:
-      context: ./notifications
-      dockerfile: ./Dockerfile
+      context: C:/Users/dudos/PycharmProjects/pythonDIPLOMlastVERS/notifications
+      dockerfile: Dockerfile
     image: app/app_notifications
     container_name: app_notifications
     command: bash -c "python3 main.py"
@@ -58,8 +58,8 @@ services:
 
   api:
     build:
-      context: ./api
-      dockerfile: ./Dockerfile
+      context: C:/Users/dudos/PycharmProjects/pythonDIPLOMlastVERS/api
+      dockerfile: Dockerfile
     image: app/app_api
     container_name: app_api
 
@@ -93,7 +93,7 @@ services:
   gui:
     build:
       context: ./gui
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     image: app/app_gui
     restart: on-failure
     depends_on:

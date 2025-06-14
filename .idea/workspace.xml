@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11ffef9f-b4b9-462e-a885-10ca264896c2" name="Changes" comment="com_patch_2">
+    <list default="true" id="11ffef9f-b4b9-462e-a885-10ca264896c2" name="Changes" comment="com_patch_3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/api/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notifications/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notifications/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staging-local.docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/staging-local.docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,10 +55,33 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
-    "settings.editor.selected.configurable": "preferences.externalResources"
+    "Shell Script.docker-entrypoint.sh.executor": "Run",
+    "git-widget-placeholder": "tests",
+    "settings.editor.selected.configurable": "promo.django"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="docker-entrypoint.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/api/docker-entrypoint.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/sh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.docker-entrypoint.sh" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -92,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748853947604</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="com_patch_3">
+      <option name="closed" value="true" />
+      <created>1749011455303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749011455303</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +147,7 @@
     <MESSAGE value="com_none_worked" />
     <MESSAGE value="com_patch" />
     <MESSAGE value="com_patch_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="com_patch_2" />
+    <MESSAGE value="com_patch_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="com_patch_3" />
   </component>
 </project>
