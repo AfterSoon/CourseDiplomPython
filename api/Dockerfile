@@ -1,4 +1,4 @@
-FROM app/app_base
+FROM app/app_base AS api
 
 # Создание рабочего каталога
 RUN mkdir -p /app/api

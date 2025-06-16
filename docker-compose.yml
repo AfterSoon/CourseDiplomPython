@@ -1,5 +1,5 @@
-# This is compose file using only local develop
-version: "3.5"
+# This is composee file using only local develop
+
 
 services:
   db:

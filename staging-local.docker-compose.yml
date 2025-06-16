@@ -1,9 +1,7 @@
-
-
 services:
   app_base:
     build:
-      context: ./lib
+      context: ./api
       dockerfile: Dockerfile
     image: app/app_base
 
@@ -19,7 +17,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d postgres" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -92,7 +90,7 @@ services:
 
   gui:
     build:
-      context: ./gui
+      context: C:/Users/dudos/PycharmProjects/pythonDIPLOMlastVERS/gui
       dockerfile: Dockerfile
     image: app/app_gui
     restart: on-failure
@@ -101,11 +99,12 @@ services:
       - api
       - notifications
     volumes:
-      - ./nginx/prod.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/prod.conf:/etc/nginx/conf.d/prod.conf
     ports:
       - 80:80
 
+
 volumes:
-  db: {}
-  node_modules: {}
-  media: {}
+  db: { }
+  node_modules: { }
+  media: { }

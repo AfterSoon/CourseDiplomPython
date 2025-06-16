@@ -28,7 +28,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Установка PYTHONPATH чтобы Python видел ваш проект
-ENV PYTHONPATH="/app:${PYTHONPATH}"
+# ENV PYTHONPATH="/app:${PYTHONPATH}"
 
 # Установка вашего пакета (если нужно)
-RUN pip install -e .
+# RUN pip install -e .
